@@ -123,13 +123,17 @@ public:
         Radius = radius;
         Height = height;
     }
-    int getRH()
+    int getR()
     {
         cout << "Enter the radius:" << endl;
         cin >> Radius;
+        return Radius;
+    }
+    int getH()
+    {
         cout << "Enter the Height:" << endl;
         cin >> Height;
-        return Radius, Height;
+        return Height;
     }
 
     float computeArea()
@@ -159,7 +163,7 @@ int main()
 {
     char ask;
     do
-    
+
     {
         cout << "NAME: EDWIN ODHIAMBO OWINO" << endl;
         cout << "REG No.: SCT211-0725/2021\n"
@@ -185,7 +189,7 @@ int main()
         }
         else if (option == 3)
         {
-            Cylinder cylinder = Cylinder(cylinder.getRH(), cylinder.getRH());
+            Cylinder cylinder = Cylinder(cylinder.getR(), cylinder.getH());
             cout << "Details of cylinder:\n"
                  << cylinder.printCylinder() << endl;
         }
@@ -195,7 +199,6 @@ int main()
             cout << "Details of Sphere:\n"
                  << sphere.printSphere() << endl;
         }
-        
 
         cout << "Do you want to continue? y/n\n";
         cin >> ask;
